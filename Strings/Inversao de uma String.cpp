@@ -22,7 +22,7 @@ int main(){
 
     s = aux;
 
-    cout << aux << "\n";
+    cout << s << "\n";
 
     return 0;
 }
