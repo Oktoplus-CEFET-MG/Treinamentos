@@ -9,9 +9,8 @@ int main(){
 
     cin >> n >> a >> b;
     cin >> s;
-
-    for(i = 0; i < n; i++)
-        aux = s;
+    
+    aux = s;
     
     i = b-1;
 
