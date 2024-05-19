@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+bool compara(int a, int b){
+    if(a > b)
+        return true;
+    if(b > a)
+        return false;
+}
+
+int main(){
+    int n, soma_total = 0, acordado, cont = 0, j = 0, valor = 0;
+    cin >> n;
+    int vet[n];
+    
+    for(int i = 0; i < n; i++){
+        cin >> vet[i];
+        soma_total+=vet[i];
+    }
+
+    acordado = (soma_total/2) + 1;
+    sort(vet, vet+n, compara);
+    
+    while(valor < acordado){  
+        valor+=vet[j];
+        cont++;
+        j++;
+    }
+    
+    cout << cont << "\n";
+    return 0;
+}
