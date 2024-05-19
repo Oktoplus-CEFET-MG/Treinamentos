@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+bool compara(char a, char b){
+    if(a < b)
+        return true;
+    if(b < a)
+        return false;
+}
+
+int main(){
+    string s;
+    int j=0;
+    vector<char> vet;
+
+    cin >> s;
+
+    while(s[j] != '\0'){
+        if(s[j] != '+'){
+            vet.push_back(s[j]);
+        }
+        j++;
+    }
+
+    sort(vet.begin(), vet.end(), compara); 
+
+    for(int i=0; i<vet.size() - 1; i++){
+        cout << vet[i] << "+";
+    }
+
+    cout << vet[vet.size()-1] << endl;
+
+    return 0;
+}
